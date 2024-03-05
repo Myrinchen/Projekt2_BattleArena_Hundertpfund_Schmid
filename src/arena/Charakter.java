@@ -52,7 +52,10 @@ public abstract class Charakter {
 	}
 	
 	public abstract int randompoints();
+
 	public abstract void activateSpecialAbillity();
 	public abstract void deactivateSpecialAbillity();
+
+
 	
 }
