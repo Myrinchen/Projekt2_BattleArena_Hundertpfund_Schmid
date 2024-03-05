@@ -46,7 +46,10 @@ public abstract class Charakter {
 		this.lifepoints = lifepoints - damagePoints; 
 	}
 	
-	public abstract void attack(Charakter enemy);
+	public void attack(Charakter enemy) {
+		damagepoints = randompoints();
+		enemy.getDamage(damagepoints);	
+	}
 	
 	public abstract int randompoints();
 	
