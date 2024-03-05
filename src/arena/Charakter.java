@@ -11,7 +11,7 @@ public abstract class Charakter {
 	
 	public Charakter(String name) {
 		super();
-		name = name;
+		this.name = name;
 		this.lifepoints = 100;
 		this.specialAbilityActive = false;
 		this.damagepoints = 0;
@@ -20,13 +20,13 @@ public abstract class Charakter {
 		return name;
 	}
 	public void setName(String name) {
-		name = name;
+		this.name = name;
 	}
 	public int getLifepoints() {
 		return lifepoints;
 	}
 	public void setLifepoints(int lifepoints) {
-		lifepoints = lifepoints;
+		this.lifepoints = lifepoints;
 	}
 	public boolean isSpecialAbilityActive() {
 		return specialAbilityActive;
@@ -38,7 +38,7 @@ public abstract class Charakter {
 		return damagepoints;
 	}
 	public void setDamagepoints(int damagepoints) {
-		damagepoints = damagepoints;
+		this.damagepoints = damagepoints;
 	}
 	
 	
