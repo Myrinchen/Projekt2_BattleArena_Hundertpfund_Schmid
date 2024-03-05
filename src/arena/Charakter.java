@@ -46,11 +46,11 @@ public abstract class Charakter {
 		this.lifepoints = lifepoints - damagePoints; 
 	}
 	
-	public void attack(Charakter enemy);
+	public abstract void attack(Charakter enemy);
 	
-	public int randompoints();
+	public abstract int randompoints();
 	
-	public void activateSpecialAbillity();
-	public void deactivateSpecialAbillity();
+	public abstract void activateSpecialAbillity();
+	public abstract void deactivateSpecialAbillity();
 	
 }
