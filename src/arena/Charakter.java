@@ -47,13 +47,12 @@ public abstract class Charakter {
 	}
 	
 	public void attack(Charakter enemy) {
-		damagePoints = randompoints();
-		enemy.getDamage(damagePoints);	
+		damagepoints = randompoints();
+		enemy.getDamage(damagepoints);	
 	}
 	
-	public int randompoints();
+	public abstract int randompoints();
+	public abstract void activateSpecialAbillity();
+	public abstract void deactivateSpecialAbillity();
 	
-	public void activateSpecialAbillity();
-	public void deactivateSpecialAbillity();
-	//gfchvbjknlmö,
 }
