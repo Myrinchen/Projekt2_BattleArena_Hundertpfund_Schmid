@@ -7,23 +7,13 @@ public class Dragon extends Charakter{
 		super(name);
 			}
 
-	public void attack(Charakter enemy) {
-        int ba = ThreadLocalRandom.current().nextInt(20, 25);
-        if (isSpecialAbilityActive() == true) {
-            int malus = ThreadLocalRandom.current().nextInt(5, 10);
-            ba -= malus;
-            
-        }
-        enemy.getDamage(ba);
-    }
-
-	@Override
 	public int randompoints() {
+		int randomPoints = 0;
 		if(isSpecialAbilityActive() == false) {
-			int randomPoints = ThreadLocalRandom.current().nextInt(20, 25);
+			 randomPoints = ThreadLocalRandom.current().nextInt(20, 25);
 		}
 		else if(isSpecialAbilityActive() == false) {
-			int randomPoints = ThreadLocalRandom.current().nextInt(5, 10);
+			 randomPoints = ThreadLocalRandom.current().nextInt(5, 10);
 		}
 		
 		return randomPoints;
@@ -31,15 +21,17 @@ public class Dragon extends Charakter{
 		}
 
 
-	@Override
+	
 	public void activateSpecialAbillity() {
-		// TODO Auto-generated method stub
+		this.setSpecialAbilityActive(true);
+		this.setLifepoints(getLifepoints()+10);
 		
 	}
 
-	@Override
+	
 	public void deactivateSpecialAbillity() {
-		// TODO Auto-generated method stub
+		this.setSpecialAbilityActive(false);
+		this.setLifepoints(getLifepoints()-10);
 		
 	}
 	
