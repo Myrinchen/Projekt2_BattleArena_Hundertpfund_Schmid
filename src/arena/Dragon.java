@@ -1,18 +1,18 @@
 package arena;
-<<<<<<< HEAD
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Dragon extends Charakter{
 
-	public int randompoints() {
-	ThreadLocalRandom.current().nextInt(20, 25+1);
+	public void attack(Charakter enemy) {
+        int a = ThreadLocalRandom.current().nextInt(20, 26);
+        if (isSpecialAbilityActive()) {
+            int malus = ThreadLocalRandom.current().nextInt(5, 11);
+            a -= malus;
+            setSpecialAbilityActive(false);
+        }
+        enemy.getDamage(a);
+    }
+	
 		
 	}
 	
-}
-=======
-
-public class Dragon {
-
-}
->>>>>>> branch 'master' of https://github.com/DavidHundertpfund/Projekt_BattleArena_Hundertpfund_Schmid.git
