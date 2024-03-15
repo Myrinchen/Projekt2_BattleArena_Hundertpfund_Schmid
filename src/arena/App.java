@@ -7,6 +7,12 @@ public class App {
 	public static Charakter d2 = null;
 	static String name ="";
 	static int wahl = 0;
+	/**
+     * Methode zur Eingabe der Charakterwahl.
+     *
+     * @param sc einlesen von Benutzereingaben.
+     * @return ausgewählter Charakter.
+     */
 	public static int eingabeCharakter(Scanner sc) {
 		System.out.println("Bitte wähle zwischen: \n\t" + "|1| Drache \n\t" + "|2| Zwerg");
 		
@@ -16,7 +22,12 @@ public class App {
 		}while (!(wahl >= 1 && wahl <=2));
 		return wahl;
 	}
-	
+	/**
+     * Methode zur Eingabe des Namens des Charakters.
+     *
+     * @param sc einlesen von Benutzereingaben.
+     * @return Name des Charakters.
+     */
 	public static String eingabeNameOfCharakter(Scanner sc) {
 		System.out.println("Bitte wähle einen Namen : ");
 		name = "";
@@ -25,7 +36,13 @@ public class App {
 		}while (name.equals(""));
 		return name;
 	}
-	
+	/**
+     * Methode zur Erstellung eines Charakters.
+     *
+     * @param wahl Die ausgewählte Charakterwahl.
+     * @param name Der Name des Charakters.
+     * @return Der erstellte Charakter.
+     */
 	public static Charakter createCharakter(int wahl, String name) {
 		//for(int i = 0; i<3; i++) {
 		//if(i == 1) {
@@ -53,7 +70,13 @@ public class App {
 	}
 	
 	//public static 
-	
+	/**
+     * Methode zur Eingabe der Spielaktion.
+     *
+     * @param sc  einlesen von Benutzereingaben.
+     * @param a  Die Arena.
+     * @return Die ausgewählte Spielaktion.
+     */
 	public static int eingabe(Scanner sc, Arena a) {	
 		System.out.println( a.amZug.getName() + " ist am Zug \n");
 		System.out.println("bitte wähle deinen Zug");
