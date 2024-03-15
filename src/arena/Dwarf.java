@@ -7,7 +7,12 @@ public class Dwarf extends Charakter{
 	public Dwarf(String name) {
 		super(name);
 	}
-
+	/**
+     * Methode generiert zufällige Schadenspunkte.
+     * Wenn die Spezialfähigkeit aktiv ist, werden die Schadenspunkte verdoppelt.
+     *
+     * @return Schadenspunkte
+     */
 	public int randompoints() {
 		if(this.isSpecialAbilityActive() == true) {
 			this.setDamagepoints(ThreadLocalRandom.current().nextInt(15, 25+1) *2);  
@@ -16,7 +21,10 @@ public class Dwarf extends Charakter{
 		}
 		return this.getDamagepoints();
 	}
-
+	
+	/**
+     * Methode aktiviert die Spezialfähigkeit.
+     */
 	public void activateSpecialAbillity() {
 		if(this.getLifepoints()<= 50) {
 			this.setSpecialAbilityActive(true); 
@@ -37,7 +45,9 @@ public class Dwarf extends Charakter{
 		}
 	}
 
-	
+	/**
+     * Methode deaktiviert die Spezialfähigkeit.
+     */
 	public void deactivateSpecialAbillity() {
 		this.setSpecialAbilityActive(false);
 		
