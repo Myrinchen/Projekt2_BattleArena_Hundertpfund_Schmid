@@ -12,13 +12,7 @@
 	     *
 	     * @return generierten Schadenspunkte.
 	     */
-		public int randompoints() {
-			int randomPoints = 0;
-			if(isSpecialAbilityActive() == false) {
-				 randomPoints = ThreadLocalRandom.current().nextInt(20, 25);
-			}
-<<<<<<< HEAD
-
+		
 	public int randompoints() {
 		int randomPoints = 0;
 		if(isSpecialAbilityActive() == false) {
@@ -29,14 +23,8 @@
 		}
 		
 		return randomPoints;
-=======
-			else if(isSpecialAbilityActive() == false) {
-				 randomPoints = ThreadLocalRandom.current().nextInt(5, 10);
-			}
-			
-			return randomPoints;
 				
-			}
+	}
 	
 	
 		 /**
@@ -46,8 +34,6 @@
 		public void activateSpecialAbillity() {
 			this.setSpecialAbilityActive(true);
 			this.setLifepoints(getLifepoints()+10);
->>>>>>> branch 'master' of https://github.com/Myrinchen/Projekt2_BattleArena_Hundertpfund_Schmid.git
-			
 		}
 	
 		/**

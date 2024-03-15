@@ -62,7 +62,8 @@ public class Arena {
 			amZug = this.player1;
 			enemy = this.player2;
 		}
-	}/**
+	}
+	/**
      * Führt eine Fähigkeit im Kampf aus.
     *
     * @param eingabe Die Eingabe des Spielers.

@@ -57,19 +57,15 @@ public class App {
 
 	}
 	
-<<<<<<< HEAD
 	 
-	
-=======
 	//public static 
-	/**
-     * Methode zur Eingabe der Spielaktion.
-     *
-     * @param sc  einlesen von Benutzereingaben.
-     * @param a  Die Arena.
-     * @return Die ausgewählte Spielaktion.
-     */
->>>>>>> branch 'master' of https://github.com/Myrinchen/Projekt2_BattleArena_Hundertpfund_Schmid.git
+		/**
+	     * Methode zur Eingabe der Spielaktion.
+	     *
+	     * @param sc  einlesen von Benutzereingaben.
+	     * @param a  Die Arena.
+	     * @return Die ausgewählte Spielaktion.
+	     */
 	public static int eingabe(Scanner sc, Arena a) {	
 		System.out.println( a.amZug.getName() + " ist am Zug \n");
 		System.out.println("bitte wähle deinen Zug");
