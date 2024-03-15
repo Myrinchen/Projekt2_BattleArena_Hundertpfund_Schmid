@@ -45,15 +45,28 @@ public abstract class Charakter {
 	public void getDamage(int damagePoints) {
 		this.lifepoints = lifepoints - damagePoints; 
 	}
-	
+	/**
+	 * Methode führt einen Angriff aus.
+	 *
+	 * @param enemy Spieler der angegriffen wird.
+	 */
 	public void attack(Charakter enemy) {
 		damagepoints = randompoints();
 		enemy.getDamage(damagepoints);	
 	}
-	
+	/**
+	 * Methode generiert zufällige Schadenspunkte für den Charakter.
+	 */
 	public abstract int randompoints();
-
+	
+	/**
+	 * Methode aktiviert die Spezialfähigkeit des Charakters.
+	 */
 	public abstract void activateSpecialAbillity();
+	
+	/**
+	 * Methode deaktiviert die Spezialfähigkeit des Charakters.
+	 */
 	public abstract void deactivateSpecialAbillity();
 
 
