@@ -37,7 +37,9 @@ public class Arena {
 	
 	public Charakter amZug = null;
 	private Charakter enemy = null;
-	
+	/**
+     * Bestimmt welcher Spieler zuerst am Zug ist.
+     */
 	public void beginner() {
 		int i = ThreadLocalRandom.current().nextInt(1, 2+1);
 		if(i== 1){
@@ -49,7 +51,9 @@ public class Arena {
 			this.enemy = this.player1;
 		}
 	}
-	
+	/**
+     * Wechselt den Spieler, der am Zug ist.
+     */
 	public void spielerWechsel() {
 		if( amZug == this.player1) {
 			amZug = this.player2;
@@ -58,7 +62,12 @@ public class Arena {
 			amZug = this.player1;
 			enemy = this.player2;
 		}
-	}
+	}/**
+     * Führt eine Fähigkeit im Kampf aus.
+    *
+    * @param eingabe Die Eingabe des Spielers.
+    */
+	
 	public void fight(int eingabe) {
 		
 		if(eingabe == 1) {
@@ -82,7 +91,9 @@ public class Arena {
 			System.out.println("Die Eingabe war ungültig, bitte Versuche es erneut.");
 		}
 	}
-	
+	/**
+     * Überprüft, ob ein Spieler den Kampf gewonnen hat.
+     */
 	public void checkForWinner() {
 		if (this.amZug.getLifepoints() <= 0) {
 			this.winner = this.enemy;
@@ -90,7 +101,9 @@ public class Arena {
 		}
 		
 	}
-	
+	/**
+     * Gibt Name, Lebenspunkte, und Spezialfähigkeit aktiv ist  über jeden Spieler aus.
+     */
 	
 	public void printPlayerInfo() {
 		System.out.println(this.player1.getName() + " : \n" + " Leben = " + this.player1.getLifepoints() + "\n Spezialfähigkeit aktiv = " + this.player1.isSpecialAbilityActive() 
