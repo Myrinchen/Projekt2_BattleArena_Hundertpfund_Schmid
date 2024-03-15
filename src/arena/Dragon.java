@@ -12,7 +12,7 @@ public class Dragon extends Charakter{
 		if(isSpecialAbilityActive() == false) {
 			 randomPoints = ThreadLocalRandom.current().nextInt(20, 25);
 		}
-		else if(isSpecialAbilityActive() == false) {
+		else if(isSpecialAbilityActive() == true) {
 			 randomPoints = ThreadLocalRandom.current().nextInt(5, 10);
 		}
 		

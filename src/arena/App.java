@@ -27,32 +27,20 @@ public class App {
 	}
 	
 	public static Charakter createCharakter(int wahl, String name) {
-		//for(int i = 0; i<3; i++) {
-		//if(i == 1) {
 			if(wahl == 1) {
-				 //d1 = new Dragon(name);
 				return new Dragon(name);
 			}else if (wahl == 2) {
-				//d1 = new Dwarf(name);
 				return new Dwarf(name);
 				
 			}else {
 				System.out.println("ihre Eingabe war Fehlerhaft, Versuchen sie es bitte erneut :");
+				
 			}
 			return null;
-//		}else if(i == 2) {
-//			if(wahl == 1) {
-//				d2 = new Dragon(name);
-//			}else if (wahl == 2) {
-//				d2 = new Dwarf(name);
-//			}else {
-//				System.out.println("ihre Eingabe war Fehlerhaft, Versuchen sie es bitte erneut :");
-//			}
-//		}
-//	}
+
 	}
 	
-	//public static 
+	 
 	
 	public static int eingabe(Scanner sc, Arena a) {	
 		System.out.println( a.amZug.getName() + " ist am Zug \n");
